@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-cream: #FAF7F2;
+  --color-brand-chocolate: #4A3728;
+  --color-brand-gold: #D4AF37;
+  --color-brand-maroon: #2D1E12;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-chocolate font-sans antialiased p-4 md:p-8;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.bento-card {
+  @apply bg-white rounded-[40px] p-8 border border-brand-chocolate/5 shadow-xl transition-all duration-300;
+}
+
+.bento-card-dark {
+  @apply bg-brand-chocolate text-brand-cream rounded-[40px] p-8 shadow-xl transition-all duration-300;
+}
+
+.bento-card-gold {
+  @apply bg-brand-gold text-white rounded-[40px] p-8 shadow-xl transition-all duration-300;
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+.text-reveal {
+  @apply overflow-hidden;
+}
